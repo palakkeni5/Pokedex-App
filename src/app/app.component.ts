@@ -26,8 +26,11 @@ export class AppComponent {
 
   filterPokemon = () =>{
     //console.log(this.searchValue);
-    if(this.searchValue === "") this.displayList = this.pokemonData ;
-    
+    if(this.searchValue === ""){
+       this.displayList = this.pokemonData ;
+       return ;
+      }
+    // else 
     this.displayList = this.pokemonData.filter((a:any) => {
       if(a.name.toLowerCase().includes(this.searchValue)){
         //console.log(a);
