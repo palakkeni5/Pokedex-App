@@ -1,14 +1,19 @@
-# NgPokedex
+# Pokédex App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+
+Please find the working version of the app on this [https://palakkeni5.github.io/Pokedex-App/](https://palakkeni5.github.io/Pokedex-App/)
+
+
+## Credits:
+
+Inspiration was taken from [https://pokedex.org/](https://pokedex.org/)
+
+Data , images and thumbnails were used from [https://github.com/Purukitto/PikaServe](https://github.com/Purukitto/PikaServe)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
