@@ -32,11 +32,8 @@ export class AppComponent {
       }
     // else 
     this.displayList = this.pokemonData.filter((a:any) => {
-      if(a.name.toLowerCase().includes(this.searchValue)){
-        //console.log(a);
-        return a;
-      }
-      //return a.name.english.substring(this.searchValue);
+      //return a.name.toLowerCase().includes(this.searchValue);
+      return !a.name.toLowerCase().indexOf(this.searchValue);
     })
   }
 
