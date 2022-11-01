@@ -24,14 +24,14 @@ export class AppComponent {
     console.log(this.pokemonData);
   }
 
-  filterPokemon = () =>{
+   filterPokemon = async () =>{
     //console.log(this.searchValue);
     if(this.searchValue === ""){
        this.displayList = this.pokemonData ;
        return ;
       }
     // else 
-    this.displayList = this.pokemonData.filter((a:any) => {
+    this.displayList = await this.pokemonData.filter((a:any) => {
       //return a.name.toLowerCase().includes(this.searchValue);
       return !a.name.toLowerCase().indexOf(this.searchValue);
     })
