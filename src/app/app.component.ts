@@ -16,7 +16,7 @@ export class AppComponent {
   }
   
   pokemonData: any = [];
-  displayList: any = [];
+  displayList: any [] = [];
 
   ngOnInit(): void {
     this.pokemonData = this.pokemonDataService.getPokemonData();
@@ -31,10 +31,16 @@ export class AppComponent {
        return ;
       }
     // else 
-    this.displayList = await this.pokemonData.filter((a:any) => {
-      //return a.name.toLowerCase().includes(this.searchValue);
-      return !a.name.toLowerCase().indexOf(this.searchValue);
+    this.displayList = []
+    this.pokemonData.forEach( (p:any) => {
+      if(!p.name.toLowerCase().indexOf(this.searchValue.toLowerCase())){
+        this.displayList.push(p);
+      }
     })
+    // this.displayList = await this.pokemonData.filter((a:any) => {
+    //   //return a.name.toLowerCase().includes(this.searchValue);
+    //   return !a.name.toLowerCase().indexOf(this.searchValue.toLowerCase());
+    // })
   }
 
   clearOnClick(){

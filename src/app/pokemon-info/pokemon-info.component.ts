@@ -14,6 +14,7 @@ export class PokemonInfoComponent implements OnInit {
 
   @Input() renderList? : any;
   
+  route : string = "assets/image-data/thumbnails/"
 
   ngOnInit(): void {
     console.log(this.renderList)
